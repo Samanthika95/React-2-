@@ -9,19 +9,20 @@
 </head>
 <body>
     <div id="app"></div>
-    <script type="text/babel">
+    
+    <script type = "text/babel">
         class App extends React.Component{
             render(){
-                return (
-                   <div CclassName="app-content">
-                    <h1> Welcome to react js</h1>
-                    <h3> Added new line</h3>
-                    
-                    </div> 
+                return(
+                    <div className="app-content">
+                    <h1>Hey, Ninjas</h1>
+                    <p>{ Math.random() * 10 }</p>
+                    </div>
                 )
             }
         }
-        ReactDOM.render(<App/>, document.getElementById('app'));
+
+        ReactDOM.render(<App />, document.getElementById('app'));
     </script>
     
 </body>
