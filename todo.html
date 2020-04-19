@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Todo list forum</title>
+</head>
+<body>
+    <div id="todo"></div>
+    <script tyep="text/babel">
+        class Todo extends React.Component{
+            state2 = {
+                task: 'Type ur task in the text box ',
+            
+            }
+
+            doClick=(e)=>{
+                this.setState2({
+                    task: e.target.value
+                }
+                );
+            }
+            render(){
+                return(
+                    <div className="todo-content">
+                        <h1>Your Task is {this.state2.task }</h1>
+                        <form>
+                            <h3>Your Task:</h3>
+                            <input type="text" onChange={this.doClick} />
+                            <button>submit</button>
+                        </form>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<Todo />, document.getElementById('todo'));
+
+    </script>
+    
+</body>
+</html>
