@@ -18,12 +18,15 @@
             }
             handleClick= (e)=>{
                 //console.log(e.target);
-                console.log(this.state);
+                this.setState({
+                    name: 'Yoshi',
+                    age: 25
+                });
             }
-            handleMouseOver(e){
+            handleMouseOver=(e)=>{
                 console.log(e);
             }
-            handleCopy(e){
+            handleCopy=(e)=>{
                 consle.log('Try being original for once!');
             }
             render(){
