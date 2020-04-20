@@ -12,27 +12,28 @@
     <script type="text/babel">
         class Todo extends React.Component{
             state2 = {
-                task: 'doing homework ',
+                task: 'doing homework',
+                age :30
             
             }
 
-            doClick=(e)=>{
+            doClick = (e) => {
                 this.setState2({
                     task: e.target.value
                 }
                 );
             }
-            handleSubmit=(e)=>{
+            handleSubmit= (e) => {
                 e.preventDefault();
             }
-            render(){
-                return(
+            render() {
+                return (
                     <div className="todo-content">
-                        <h1>Your Task is {this.state2.task }</h1>
-                        <form onSubmit={}>
+                        <h1>Your Task is { this.state2.task }</h1>
+                        <form onSubmit= { this.handleSubmit }>
                             <h3>Your Task:</h3>
                             <input type="text" onChange={this.doClick} />
-                            <button>submit</button>
+                            <button>Submit</button>
                         </form>
                     </div>
                 )
