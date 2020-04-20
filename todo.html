@@ -11,30 +11,32 @@
     <div id="todo"></div>
     <script type="text/babel">
         class Todo extends React.Component{
-            state2 = {
+            state = {
                 task: 'doing homework',
                 age :30
             
             }
 
             doClick = (e) => {
-                this.setState2({
+                this.setState({
                     task: e.target.value
                 }
                 );
             }
             handleSubmit= (e) => {
                 e.preventDefault();
+                console.log('form submitted', this.state2.task)
             }
             render() {
                 return (
                     <div className="todo-content">
-                        <h1>Your Task is { this.state2.task }</h1>
+                        <h1>Your Task is { this.state.task }</h1>
                         <form onSubmit= { this.handleSubmit }>
                             <h3>Your Task:</h3>
                             <input type="text" onChange={this.doClick} />
                             <button>Submit</button>
                         </form>
+                        
                     </div>
                 )
             }
