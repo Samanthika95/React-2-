@@ -22,11 +22,14 @@
                 }
                 );
             }
+            handleSubmit=(e)=>{
+                e.preventDefault();
+            }
             render(){
                 return(
                     <div className="todo-content">
                         <h1>Your Task is {this.state2.task }</h1>
-                        <form>
+                        <form onSubmit={}>
                             <h3>Your Task:</h3>
                             <input type="text" onChange={this.doClick} />
                             <button>submit</button>
